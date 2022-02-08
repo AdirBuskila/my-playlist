@@ -2,8 +2,17 @@
 
     .app-header {
         width: 100vw;
-        height: rem(45px);
+        height: rem(40px);
         padding-inline-start: rem(80px);
         padding-inline-end: rem(80px);
-        background-color: rgb(212, 210, 210);
+        background-color: rgb(240, 82, 82);
+        color: aliceblue;
+
+        .main-nav {
+            width: rem(100px);
+
+            a:hover {
+                color: rgb(211, 234, 254);
+            }
+        }
     }

@@ -1,0 +1,32 @@
+    .search-form {
+        width: 400px;
+        margin: rem(40px) auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 6fr 1fr;
+
+        input {
+            margin-right: rem(40px);
+            height: rem(30px);
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        input:focus-visible {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            height: 100%;
+        }
+        
+    }
+
+    .main-container {
+        width: 400px;
+        height: 800px;
+    }

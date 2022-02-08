@@ -7,11 +7,11 @@ export const AppHeader = () => {
       <NavLink to='/'>
         <h1>MyApp</h1>
       </NavLink>
-      <nav className='main-nav'>
+      <nav className='main-nav flex space-between'>
         <NavLink activeClassName='my-active' exact to='/'>
-          Home
+        Listen
         </NavLink>
-        <NavLink to='/home'>Home</NavLink>
+        <NavLink to='/home'>Saved</NavLink>
         {/* <NavLink to='/about'>About</NavLink> */}
       </nav>
     </header>
