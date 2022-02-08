@@ -4,13 +4,13 @@ export const SearchResults = ({ searchedVideos, setSelectedVideo, selectedVideo 
 
 
     if (!searchedVideos.length) return (<></>)
-    // const searchClassName = (selectedVideo) ? 'flex column' :
+    const searchClassName = (selectedVideo) ? 'search-results grid-2' : 'search-results grid'
   return (
     <React.Fragment>
-      <div className='search-results'>
+      <div className={searchClassName}>
         {searchedVideos.map((res, index) => {
           console.log(index);
-          if ( selectedVideo && index >= 5 ) return
+          if ( selectedVideo && index >= 8 ) return
           return (
             <section onClick={() => setSelectedVideo({id: res.videoId, desc: res.description})} className='single-preview flex'>
               <div className="img-container pointer">

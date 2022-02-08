@@ -27,7 +27,7 @@ export const HomePage = () => {
       <form
         name='search-form'
         onSubmit={onHandleSubmit}
-        className='search-form'>
+        className='search-form flex column justify-center align-items'>
         <input
           type='text'
           placeholder='Search on youtube...'
