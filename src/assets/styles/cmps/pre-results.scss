@@ -1,10 +1,22 @@
 .search-results {
-    row-gap: rem(20px);
-
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 220px);
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 20px;
   .single-preview {
-    img {
+
+    width: 100%;
+    .img-container{
+      img {
         width: rem(200px);
         height: rem(112px);
+      }
+      p {
+        font-weight: bold;
+        width: 24ch;
+      }
     }
   }
 }

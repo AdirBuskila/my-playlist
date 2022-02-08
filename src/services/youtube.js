@@ -8,8 +8,19 @@ export const youtubeService = {
 
 async function getResultYoutube(value) {
     try {
-        const {data} = await axios.get(`https://www.googleapis.com/youtube/v3/search/?key=${KEY}&part=snippet&maxResults=5&q=${value}`)
-        return data;
+        const {data} = await axios.get(`https://www.googleapis.com/youtube/v3/search/?key=${KEY}&part=snippet&maxResults=15&q=${value}`)
+        const newArr = []
+        data.items.forEach((video)=>{
+            const videoObj = {
+                videoId: video.id.videoId,
+                description: video.snippet.description,
+                title: video.snippet.title,
+                thumbnailDefault: video.snippet.thumbnails.default.url,
+                thumbnailHigh: video.snippet.thumbnails.high.url,
+              };
+              return newArr.push(videoObj);
+        })
+        return newArr;
     } catch (err) {
         console.log('Cannot get request', err);
     }
