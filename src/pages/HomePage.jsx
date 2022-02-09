@@ -16,6 +16,7 @@ export const HomePage = () => {
 
   const onHandleSubmit = async (ev) => {
     ev.preventDefault();
+    setSelectedVideo('');
     var form = document.getElementsByName('search-form')[0];
     const result = await youtubeService.getResultYoutube(value);
     setSearchedVideos(result);

@@ -1,14 +1,22 @@
 .search-results {
+    position: absolute;
+
+  &.grid {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(5, 220px);
     grid-auto-flow: row;
     justify-content: center;
     gap: 20px;
-  .single-preview {
+  }
+  &.flex {
+    position: absolute;
+    right: 20%;
+  }
 
+  .single-preview {
     width: 100%;
-    .img-container{
+    .img-container {
       img {
         width: rem(200px);
         height: rem(112px);

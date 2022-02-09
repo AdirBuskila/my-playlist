@@ -2,12 +2,11 @@ import React from 'react';
 
 export const SearchResults = ({ searchedVideos, setSelectedVideo, selectedVideo }) => {
 
-
-    if (!searchedVideos.length) return (<></>)
-    // const searchClassName = (selectedVideo) ? 'flex column' :
+  if (!searchedVideos) return (<></>)
+  const className = (!selectedVideo) ? 'search-results grid' : 'search-results flex column';
   return (
     <React.Fragment>
-      <div className='search-results'>
+      <div className={className}>
         {searchedVideos.map((res, index) => {
           console.log(index);
           if ( selectedVideo && index >= 5 ) return

@@ -5,19 +5,16 @@ export const PlayingVideo = ({selectedVideo, searchedVideos}) => {
     if (!searchedVideos){
         return (
         <div className="playing-video start flex">
-        <h1>Welcome To </h1>
-        <h1> My Youtube!</h1>
-        <h2>a Youtube based app for your pleasure</h2>
-        <h2> Search for any video you'd like!</h2>
-        <h2>Feel free to check the code at 'github link'</h2>
+        <h2>Welcome to your music app.</h2>
+        <p>Type in your favourite song / artist and let the show begin.</p>
         </div>
         
     )} else if (!selectedVideo) {
         return <></>
     } else 
     return (
-        <section className="playing-video">
-            {<iframe src={videoSrc} allowFullScreen className="video" ></iframe>}
+        <section className="full-video">
+            <iframe src={videoSrc} allowFullScreen className="video" ></iframe>
         </section>
     )
 }
