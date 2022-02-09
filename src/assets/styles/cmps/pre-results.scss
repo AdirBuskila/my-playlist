@@ -2,7 +2,7 @@
     position: absolute;
 
   &.grid {
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 220px);
     grid-auto-flow: row;
@@ -18,8 +18,8 @@
     width: 100%;
     .img-container {
       img {
-        width: rem(200px);
-        height: rem(112px);
+        width: rem(180px);
+        height: rem(135px);
       }
       p {
         font-weight: bold;

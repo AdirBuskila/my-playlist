@@ -13,8 +13,9 @@ export const PlayingVideo = ({selectedVideo, searchedVideos}) => {
         return <></>
     } else 
     return (
-        <section className="full-video">
-            <iframe src={videoSrc} allowFullScreen className="video" ></iframe>
+        <section className="playing-video">
+            {<iframe src={videoSrc} allowFullScreen className="video" ></iframe>}
+            <p className="playing-video-description">{selectedVideo.description}</p>
         </section>
     )
 }

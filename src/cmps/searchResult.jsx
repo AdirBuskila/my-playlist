@@ -9,7 +9,7 @@ export const SearchResults = ({ searchedVideos, setSelectedVideo, selectedVideo 
       <div className={className}>
         {searchedVideos.map((res, index) => {
           console.log(index);
-          if ( selectedVideo && index >= 5 ) return
+          if ( selectedVideo && index >= 8 ) return
           return (
             <section onClick={() => setSelectedVideo({id: res.videoId, desc: res.description})} className='single-preview flex'>
               <div className="img-container pointer">

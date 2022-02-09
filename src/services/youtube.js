@@ -9,6 +9,7 @@ export const youtubeService = {
 async function getResultYoutube(value) {
     try {
         const {data} = await axios.get(`https://www.googleapis.com/youtube/v3/search/?key=${KEY}&part=snippet&maxResults=15&q=${value}`)
+        console.log('data', data);
         const newArr = []
         data.items.forEach((video)=>{
             const videoObj = {
